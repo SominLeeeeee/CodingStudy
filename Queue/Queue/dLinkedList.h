@@ -131,7 +131,7 @@ int List::delNodeFirst() {
 	Node* temp = head;
 	head = head->next;
 	removeNode(temp);
-	if (!isEmpty()) head->prev = null;
+	if(!isEmpty()) head->prev = null;
 
 	return result;
 }
@@ -144,7 +144,7 @@ int List::delNodeLast() {
 	Node* temp = tail;
 	tail = tail->prev;
 	removeNode(temp);
-	if (!isEmpty()) tail->next = null;
+	if(!isEmpty()) tail->next = null;
 
 	return result;
 }
