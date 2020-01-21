@@ -16,7 +16,7 @@ int main() {
 	l->addNodeFirst(1);
 	l->printList();
 
-	l->addNode(7, 8);
+	l->addNode(7, 7);
 	l->printList();
 
 	l->delNode(3);
