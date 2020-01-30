@@ -25,50 +25,50 @@ int main() {
 	graph.resize(N+2);
 	for (int i = 0; i < N+2; i++) {
 		graph[i].resize(M+2, no);
-	}	// Å©±â°¡ N+2 * M+2ÀÎ 2Â÷¿ø º¤ÅÍ graph »ı¼º
-		// °¡ÀåÀÚ¸®ÀÇ ÁÖº¯À» Å½»öÇÒ ¶§¸¦ À§ÇØ »óÇÏÁÂ¿ì ÇÑÁÙ¾¿ Ãß°¡ÇßÀ½
+	}	// í¬ê¸°ê°€ N+2 * M+2ì¸ 2ì°¨ì› ë²¡í„° graph ìƒì„±
+		// ê°€ì¥ìë¦¬ì˜ ì£¼ë³€ì„ íƒìƒ‰í•  ë•Œë¥¼ ìœ„í•´ ìƒí•˜ì¢Œìš° í•œì¤„ì”© ì¶”ê°€í–ˆìŒ
 
 	for (int i = 1; i < N+1; i++) {
 		for (int j = 1; j < M+1; j++) {
 			cin >> graph[i][j];
 		}
-	}	// graph º¤ÅÍ ÀÔ·Â¹ŞÀ½
+	}	// graph ë²¡í„° ì…ë ¥ë°›ìŒ
 
 	length.resize(N + 2);
 	for (int i = 0; i < N + 2; i++) {
 		length[i].resize(M + 2, 0);
-	}	// 2Â÷¿ø º¤ÅÍ length »ı¼º ¹× ÃÊ±âÈ­
+	}	// 2ì°¨ì› ë²¡í„° length ìƒì„± ë° ì´ˆê¸°í™”
 
-	length[1][1] = 1;					// ½ÃÀÛÁ¡ÀÇ length´Â 1
+	length[1][1] = 1;				// ì‹œì‘ì ì˜ lengthëŠ” 1
 	
-	q.push(make_pair(1, 1));			// ½ÃÀÛÁ¡À» Q¿¡ ³Ö´Â´Ù
-	visit(1, 1);						// ½ÃÀÛÁ¡ ¹æ¹®ÇßÀ½
+	q.push(make_pair(1, 1));			// ì‹œì‘ì ì„ Qì— ë„£ëŠ”ë‹¤
+	visit(1, 1);					// ì‹œì‘ì  ë°©ë¬¸í–ˆìŒ
 
-	while (!q.empty()) {				// q°¡ ºô ¶§±îÁö °è¼ÓÇÑ´Ù
+	while (!q.empty()) {				// qê°€ ë¹Œ ë•Œê¹Œì§€ ê³„ì†í•œë‹¤
 		temp = q.front();
-		q.pop();						// qÀÇ Ã¹¹øÂ° pop
-		check(temp.first, temp.second); // ²¨³½ vertex ÀÎÁ¢vertex °Ë»ç
+		q.pop();				// qì˜ ì²«ë²ˆì§¸ pop
+		check(temp.first, temp.second); 	// êº¼ë‚¸ vertex ì¸ì ‘vertex ê²€ì‚¬
 	}
 
-	cout << length[N][M];				// ½ÃÀÛÁ¡->(N,M) ±æÀÌ
+	cout << length[N][M];				// ì‹œì‘ì ->(N,M) ê¸¸ì´
 
 }
 
 void visit(int x, int y) {
-	graph[x][y] = no;					// ¹æ¹®ÇÑ °÷Àº ¸ø°¡´Â°É·Î Ã³¸®
+	graph[x][y] = no;				// ë°©ë¬¸í•œ ê³³ì€ ëª»ê°€ëŠ”ê±¸ë¡œ ì²˜ë¦¬
 }
 
 void check(int x, int y) {
-	find(x, y - 1, length[x][y]);		// »óÇÏÁÂ¿ì ´Ù Ã¼Å©
+	find(x, y - 1, length[x][y]);			// ìƒí•˜ì¢Œìš° ë‹¤ ì²´í¬
 	find(x, y + 1, length[x][y]);
 	find(x - 1, y, length[x][y]);
 	find(x + 1, y, length[x][y]);
 }
 
 void find(int x, int y, int leng) {
-	if (graph[x][y] == yes) {			// °¥ ¼ö ÀÖ´Â °÷ÀÌ¶ó¸é
-		q.push(make_pair(x, y));		// q¿¡ Ãß°¡
-		visit(x, y);					// ¹æ¹® ÇßÀ½À» Ç¥½Ã
-		length[x][y] = leng + 1;		// °É¸®´Â °Å¸® Ç¥½Ã
+	if (graph[x][y] == yes) {			// ê°ˆ ìˆ˜ ìˆëŠ” ê³³ì´ë¼ë©´
+		q.push(make_pair(x, y));		// qì— ì¶”ê°€
+		visit(x, y);				// ë°©ë¬¸ í–ˆìŒì„ í‘œì‹œ
+		length[x][y] = leng + 1;		// ê±¸ë¦¬ëŠ” ê±°ë¦¬ í‘œì‹œ
 	}
 }
