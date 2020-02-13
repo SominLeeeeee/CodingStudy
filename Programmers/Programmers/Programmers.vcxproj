@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{6903CB22-6919-4007-984B-0BD12F6F7443}</ProjectGuid>
-    <RootNamespace>DP</RootNamespace>
+    <ProjectGuid>{F19D118D-AD3D-41C0-B3B3-4E3E343250A2}</ProjectGuid>
+    <RootNamespace>Programmers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,10 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11052.cpp" />
-    <ClCompile Include="1463.cpp" />
-    <ClCompile Include="2579.cpp" />
-    <ClCompile Include="DP_RodCutting.cpp" />
+    <ClCompile Include="level2_1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

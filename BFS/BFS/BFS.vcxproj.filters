@@ -15,19 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BFS1.cpp">
+    <ClCompile Include="2234.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BFS2.cpp">
+    <ClCompile Include="3055.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BFS3.cpp">
+    <ClCompile Include="7576.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="practice.cpp">
+    <ClCompile Include="2178.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
