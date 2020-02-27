@@ -25,5 +25,11 @@ int main() {
 
     addauto(3, 4);
 
+/*
+    auto b;
+    b = 1;
+    cout << "b type is " << typeid(b).name() << endl;
+*/
+
     return 0;
 }
