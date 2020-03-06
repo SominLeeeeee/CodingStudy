@@ -39,7 +39,6 @@ int main() {
 
 	auto it = m.begin();
 	cout << "it type is " << typeid(it).name() << endl;
-	cout << "a type is " << typeid(a).name() << endl;
 
 	cout << m.find("aa")->second << endl;
 	return 0;

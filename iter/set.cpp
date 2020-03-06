@@ -25,7 +25,7 @@ int main() {
     s.insert(20);
     auto it = s.begin();
     for(; it != s.end(); it++) {
-        cout << *iter << " ";
+        cout << *it << " ";
     }
     cout << endl;
 }
